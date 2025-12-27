@@ -1,0 +1,14 @@
+<app-card>
+    <!-- event binding example -->
+    <!-- class binding example -->
+    <button [class.active]="selected" type="button" (click)="onSelect()">
+        <!-- property binding example -->
+        <!-- src property updated using getter function -->
+        <img 
+            [src]= "imagePath"  
+            [alt]="user.name"
+        />
+        <!-- interpolation example -->
+        <span>{{user.name}}</span>
+    </button>
+</app-card>
