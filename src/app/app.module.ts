@@ -4,26 +4,25 @@ import { App } from "./app";
 import { Header } from "./header/header";
 import { User } from "./user/user";
 import { Tasks } from "./tasks/tasks";
-import { Card } from "./shared/card/card";
 import { Task } from "./tasks/task/task";
-import { DatePipe, NgFor, NgIf } from "@angular/common";
 import { NewTask } from "./tasks/new-task/new-task";
 import { FormsModule } from "@angular/forms";
+import { SharedModule } from "./shared/shared.modules";
 
 @NgModule({
     declarations: [
         App, 
         Header, 
         User, 
-        Card, 
         Task, 
         Tasks, 
         NewTask
-    ], //non standalone components
+    ], //non standalone components these modules work with each other
     bootstrap: [App], // root component of the app
     imports: [ 
         BrowserModule, 
-        FormsModule
+        FormsModule,
+        SharedModule
     ] //standalone components
 })
 export class AppModule {}
